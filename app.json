@@ -1,0 +1,12 @@
+{
+  "name": "py_capsula",
+  "displayName": "py_capsula",
+  "expo": {
+    "name": "py_capsula",
+    "slug": "py_capsula",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
