@@ -1,21 +1,20 @@
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_exempt
 from .forms import *
 
 # Create your views here.
 
-
+@csrf_exempt
 def post(request):
-
     if request.method == 'POST':
         form = Upload_image(request.POST, request.FILES)
-
         if form.is_valid():
             form.save()
             return HttpResponse('successfully uploaded')
     else:
         form = Upload_image()
-    return render(request, 'index.html', {'form': form})
+        return HttpResponse('error while recing file')
 
 
 def index(request):
